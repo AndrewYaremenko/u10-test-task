@@ -35,7 +35,7 @@ class DeliveryController extends Controller
         $deliveryService->validate($data);
         //Send request
         dd($deliveryService);
-        $status = $deliveryService->sendRequest()->getStatus;
+        $status = $deliveryService->sendRequest()->getStatus();
 
         return response()->json('', $status);
     }
