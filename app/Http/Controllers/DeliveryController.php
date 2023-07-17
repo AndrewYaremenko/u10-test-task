@@ -6,14 +6,20 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use App\Http\Services\DeliveryService;
 
-
+/**
+ * DeliveryController
+ *
+ * Controller class for managing delivery orders.
+ */
 class DeliveryController extends Controller
 {
     /**
      * order
      *
-     * @param  Request $request
-     * @return \Illuminate\Http\Response|\Illuminate\Contracts\Routing\ResponseFactory
+     * Handles the order request for delivery.
+     *
+     * @param  Request $request The HTTP request object.
+     * @return \Illuminate\Http\Response|\Illuminate\Contracts\Routing\ResponseFactory The response object or factory.
      */
     public function order(Request $request)
     {
