@@ -24,9 +24,9 @@ class NovaPoshtaDelivery extends DeliveryService
             'height' => $data['height'],
             'weight' => $data['weight'],
         ];
-        $data['sender_address'] = env('NovaPoshta_sender_address');
+        $validatedData['sender_address'] = env('NovaPoshta_sender_address');
 
-        $this->setData($data);
+        $this->setData($validatedData);
     }
 
     public function sendRequest()

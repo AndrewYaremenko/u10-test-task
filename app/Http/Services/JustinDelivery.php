@@ -9,7 +9,7 @@ class JustinDelivery extends DeliveryService
 {
     public function __construct()
     {
-        $this->setUrl(env('UkrPoshtaUrl'));
+        $this->setUrl(env('JustinUrl'));
     }
 
     public function validate($data)
@@ -24,9 +24,9 @@ class JustinDelivery extends DeliveryService
             'package_height' => $data['height'],
             'package_weight' => $data['weight'],
         ];
-        $data['address_sender'] = env('Justin_sender_address');
+        $validatedData['address_sender'] = env('Justin_sender_address');
 
-        $this->setData($data);
+        $this->setData($validatedData);
     }
 
     public function sendRequest()
