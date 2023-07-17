@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
-use App\Http\Services\DeliveryService;
+use App\Http\Services\Delivery\DeliveryService;
 
 /**
  * DeliveryController
